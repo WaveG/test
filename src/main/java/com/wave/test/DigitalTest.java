@@ -2,6 +2,8 @@ package com.wave.test;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.Random;
 
 /**
@@ -14,4 +16,17 @@ public class DigitalTest {
         Random generator = new Random();
         System.out.println(generator.nextInt(0));
     }
+
+    @Test
+    public void rateConvertTest() {
+        BigDecimal rate = new BigDecimal("0.005");
+        System.out.println(convertRate(rate));
+    }
+
+    private String convertRate(BigDecimal rate) {
+        DecimalFormat decimalFormat = new DecimalFormat("###.###");
+
+        return decimalFormat.format(rate.multiply(new BigDecimal(100))) + "%";
+    }
+
 }

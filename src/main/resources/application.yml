@@ -1,0 +1,15 @@
+ppx:
+  environment: @ppx.environment@
+  name: service-bank-account
+  config:
+    publicGroups: middleware
+
+spring:
+  application:
+    name: test
+
+pingpong:
+  mq:
+    nameSrv: ${middleware.ons.nameserver}
+    accessKey: ${middleware.ons.access-key}
+    secretKey: ${middleware.ons.secret-key}

@@ -1,6 +1,7 @@
 package com.wave.test;
 
 import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
 import org.junit.Test;
 
 /**
@@ -11,14 +12,14 @@ public class DateTest {
 
     @Test
     public void dateTest() {
-        DateTime now = new DateTime("2019-04-19T15:30:00");
+        DateTime now = new DateTime("2019-07-09T20:00:00", DateTimeZone.UTC);
 
         System.out.println(now.getMillis());
     }
 
     @Test
     public void millisToDate() {
-        DateTime date = new DateTime(1557711364000L);
+        DateTime date = new DateTime(1555328906000L);
         System.out.println(date.toString());
     }
 
