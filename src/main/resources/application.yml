@@ -8,8 +8,9 @@ spring:
   application:
     name: test
 
-pingpong:
+pingpongx:
   mq:
-    nameSrv: ${middleware.ons.nameserver}
+    namesrvAddr: ${middleware.ons.nameserver}
     accessKey: ${middleware.ons.access-key}
     secretKey: ${middleware.ons.secret-key}
+    groupId: test

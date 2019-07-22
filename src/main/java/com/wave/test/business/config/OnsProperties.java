@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by Wave on 2019/7/9.
  */
-@ConfigurationProperties("pingpong.mq")
+@ConfigurationProperties("pingpongx.mq")
 @Data
 @Component
 public class OnsProperties {
