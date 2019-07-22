@@ -66,7 +66,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.47</version>
+            <version>1.2.58</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -108,7 +108,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <ppx.environment>dev</ppx.environment>
+                <ppx.environment>dev2-b2b-us</ppx.environment>
             </properties>
         </profile>
         <profile>

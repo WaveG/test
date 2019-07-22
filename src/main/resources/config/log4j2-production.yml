@@ -1,0 +1,31 @@
+Configuration:  
+  status: warn  
+  Appenders:  
+    Console:  
+      name: console  
+      target: SYSTEM_OUT  
+      ThresholdFilter:  
+        level: trace  
+        onMatch: ACCEPT  
+        onMismatch: DENY  
+      PatternLayout:  
+        pattern: "[%d{yyyy-MM-dd HH:mm:ss}] [%3p]--[%X{operator} %X{request}] - %m%n"  
+        
+    File:
+      name: stdout
+      fileName: "${sys:catalina.home}/../logs/stdout.log"
+      PatternLayout:
+        Pattern: "[%date] %-5level [%-22thread] %70logger{1.}:%-3line - [%mdc{operator} %mdc{request}] %msg%n%throwable"
+      
+  Loggers:  
+    Root:  
+      level: info  
+      AppenderRef:  
+        - ref: console
+        - ref: stdout  
+        
+    Logger:   
+      - name: org.springframework
+        level: info  
+      - name: RocketmqClient
+        level: warn

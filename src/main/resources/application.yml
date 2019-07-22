@@ -1,8 +1,9 @@
 ppx:
   environment: @ppx.environment@
-  name: service-bank-account
+  name: test
   config:
     publicGroups: middleware
+#    zkAddress: dev2-b2b-us-zk1.pingpongx.com:2181
 
 spring:
   application:
@@ -13,4 +14,4 @@ pingpongx:
     namesrvAddr: ${middleware.ons.nameserver}
     accessKey: ${middleware.ons.access-key}
     secretKey: ${middleware.ons.secret-key}
-    groupId: test
+    groupId: GID-workflow-integration

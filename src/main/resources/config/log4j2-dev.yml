@@ -1,0 +1,17 @@
+Configuration:  
+  Appenders:  
+    Console:  
+      name: console  
+      target: SYSTEM_OUT  
+      ThresholdFilter:  
+        level: trace  
+        onMatch: ACCEPT  
+        onMismatch: DENY  
+      PatternLayout:  
+        pattern: "[%date] %-5level - [%mdc{operator} %mdc{request}] %msg%n%throwable"
+        
+  Loggers:  
+    Root:  
+      level: DEBUG
+      AppenderRef:  
+        - ref: console
