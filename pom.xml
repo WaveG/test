@@ -47,9 +47,8 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.pingpongx.business</groupId>
-            <artifactId>mq-spring-boot-starter</artifactId>
-            <version>1.0.3-SNAPSHOT</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -90,14 +89,23 @@
             <version>1.8.0.Final</version>
         </dependency>
         <dependency>
-            <groupId>com.pingpongx.workflow</groupId>
-            <artifactId>workflow-integration-client</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.pingpongx.config</groupId>
-            <artifactId>config-center-client</artifactId>
-            <version>1.0.5-SNAPSHOT</version>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-common</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-all</artifactId>
+            <version>4.3.0</version>
         </dependency>
     </dependencies>
 
@@ -134,7 +142,7 @@
             </resource>
         </resources>
         <filters>
-            <filter>src/main/resources/profile/${environment}.properties</filter>
+            <filter>src/main/resources/profile/${ppx.environment}.properties</filter>
         </filters>
 
         <plugins>

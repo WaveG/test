@@ -15,7 +15,7 @@ public class ListTest {
 
     @Test
     public void stringSplitTest() {
-        String s = "{\"checkDate\":1528717164850,\"checkUser\":\"Geng.Zhou@pingpongx-eu.com\",\"comment\":\"\",\"riskRating\":\"Low\",\"value\":\"Home, Garden & Pets\"}";
+        String s = "";
 
         JSONObject obj = JSONObject.parseObject(s);
         System.out.println(new DateTime(obj.getDate("checkDate")));
