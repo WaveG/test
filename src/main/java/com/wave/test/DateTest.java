@@ -12,7 +12,7 @@ public class DateTest {
 
     @Test
     public void dateTest() {
-        DateTime now = new DateTime("2019-07-19T20:00:00", DateTimeZone.UTC);
+        DateTime now = new DateTime("2020-05-20T00:00:00", DateTimeZone.UTC);
 
         System.out.println(now.getMillis());
     }

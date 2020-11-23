@@ -29,4 +29,19 @@ public class DigitalTest {
         return decimalFormat.format(rate.multiply(new BigDecimal(100))) + "%";
     }
 
+    @Test
+    public void test() {
+        BigDecimal i = new BigDecimal(5);
+        for (int j = 1; j < 4321; j++) {
+            i = i.multiply(new BigDecimal(5));
+        }
+        System.out.println(i);
+
+        BigDecimal x = new BigDecimal(4);
+        for (int y = 1; y < 5321; y++) {
+            x = x.multiply(new BigDecimal(4));
+        }
+        System.out.println(x);
+    }
+
 }
